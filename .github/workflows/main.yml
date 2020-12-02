@@ -20,7 +20,7 @@ jobs:
           php-version: ${{ matrix.php-versions }}
 
       - name: Setup Dependencies
-          run: sudo apt-get install valgrind -y
+        run: sudo apt-get install valgrind -y
 
       - name: Build Extension And Execute Tests
         env:
