@@ -19,6 +19,9 @@ jobs:
         with:
           php-version: ${{ matrix.php-versions }}
 
+      - name: Setup Dependencies
+          run: sudo apt-get install valgrind -y
+
       - name: Build Extension And Execute Tests
         env:
           REPORT_EXIT_STATUS: 1
